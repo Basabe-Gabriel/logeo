@@ -1,11 +1,15 @@
-let intentos: number = 1;
+let intentos: number = 0;
 
 let respuesta: string = "";
 
-while (intentos <= 3 && respuesta === !"eureka");
-{
-  // let respuesta = prompt("ingrese la contraseña");
+while (intentos <= 3 && respuesta !== "eureka") {
+  respuesta = prompt("ingrese la contraseña");
   intentos = intentos + 1;
-  // respuesta = prompt("intente de nuevo");
 }
-console.log("intentos");
+
+if (respuesta === "eureka") {
+  console.log("en hora buena has ingresado");
+} else {
+  console.log("cagaste");
+}
+console.log(intentos);
